@@ -89,4 +89,8 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
 
+  localMemoryDb: {
+    adapter: 'sails-memory'
+  },
+
 };
