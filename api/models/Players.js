@@ -1,6 +1,7 @@
 
-// Player.js
+// Players.js
 // Set of player statistics
+
 module.exports = {
   attributes: {
     name: 'string',
@@ -12,6 +13,7 @@ module.exports = {
     stdDev: 'float',
     rank: 'integer',
     tier: 'integer',
-    position: 'string'
+    position: 'string',
+    scoring: 'string'
   }
 };
