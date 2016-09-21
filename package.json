@@ -24,6 +24,7 @@
     "grunt-sync": "0.5.2",
     "include-all": "~0.1.6",
     "lodash": "^4.16.1",
+    "nodemon": "^1.10.2",
     "rc": "1.0.1",
     "sails": "~0.12.4",
     "sails-disk": "~0.10.9",
@@ -37,8 +38,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jrparish/ff-api.git"
-  },
-  "devDependencies": {
-    "nodemon": "^1.10.2"
   }
 }
