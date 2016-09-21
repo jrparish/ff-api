@@ -1,5 +1,6 @@
 const csv = require('fast-csv');
 const http = require('http');
+const { includes } = require('lodash');
 
 // Attributes
 const PLAYER_NAME = 'Player.Name';
@@ -29,10 +30,13 @@ const PPR = { name: 'PPR', prefix: 'PPR-' };
 const HALF_PPR = { name: 'HALF_PPR', prefix: 'HALF-POINT-PPR-' };
 
 function filterPlayers({ position, scoring }) {
-  const criteria = position && scoring ? { position, scoring } : { scoring };
+  // Set scoring to standard if non-receiving position
+  if (includes([QB, K, DST], position)) {
+    scoring = STANDARD.name;
+  }
 
   return Players
-    .find(criteria)
+    .find({ position, scoring })
     .sort('rank ASC');
 }
 

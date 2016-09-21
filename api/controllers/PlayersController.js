@@ -6,9 +6,9 @@ module.exports = {
   find({ query }, res) {
     const { position, scoring } = query;
 
-    if (!scoring) {
-      res.json(500, {
-        error: 'Scoring filter must be specified.'
+    if (!scoring || !position) {
+      return res.json(500, {
+        error: 'Scoring and Position filters must be specified.'
       });
     }
 
