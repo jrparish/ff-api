@@ -31,8 +31,8 @@
     "sails-memory": "^0.10.7"
   },
   "scripts": {
-    "debug": "node debug app.js",
-    "start": "nodemon app.js"
+    "debug": "nodemon app.js",
+    "start": "sails lift"
   },
   "main": "app.js",
   "repository": {
